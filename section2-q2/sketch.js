@@ -15,16 +15,12 @@ function setup() {
         rect(i*size,j*size,size,size);
 
       if(j<3){
-        if((i+j)%2==1){
         fill(255,0,0);
         ellipse(size/2+25*i,size*j+size/2,20);
-      }
     }
     else if(j>4){
-      if((i+j)%2==1){
         fill(0);
         ellipse(size/2+25*i,size*j+size/2,20);
-      }
     }
   }
 
