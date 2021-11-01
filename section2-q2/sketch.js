@@ -16,11 +16,11 @@ function setup() {
 
       if(j<3){
         fill(255,0,0);
-        ellipse(size/2+25*i,size*j+size/2,20);
+        ellipse(size/2+size*i,size*j+size/2,20);
     }
     else if(j>4){
         fill(0);
-        ellipse(size/2+25*i,size*j+size/2,20);
+        ellipse(size/2+size*i,size*j+size/2,20);
     }
   }
 
