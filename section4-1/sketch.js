@@ -20,7 +20,7 @@ function setup(){
   // ここから平均・最大・最小を求めます
   let average, largest, smallest;
   // BLANK[1]　平均値（ヒント average = 合計 / 配列の長さ）
-  average=scores/scores.length;
+  average= sum /scores.length;
 
   largest = 0;
   for(let i = 0; i < scores.length; i++){
@@ -54,21 +54,21 @@ function setup(){
     const dx = width / scores.length;
     const h = height * scores[i] / 100;
     // BLANK[4] ヒント: 条件分岐を使って色を変更します
-    fill(0);
-    text(scores[i].toPrecision(3), i * dx, height - h);
-    if(scores[i]=largest){
-    fill(196, 0, 0);
-    rect(i * dx + 2, height - h, dx - 4, h);
+    if(largest == scores[i]){
+      fill(255,0,0);
     }
-    else if(scores[i]=smallest){fill(14, 47, 146);
-    rect(i * dx + 2, height - h, dx - 4, h);
-
+    else if(scores[i] == smallest){
+      fill(0,0,255);
     }
     else{
-      fill(0);
-    rect(i * dx + 2, height - h, dx - 4, h);
+      fill(128);
+    }
+      rect(i * dx + 2, height - h, dx - 4, h);
+    fill(0);
+    text(scores[i].toPrecision(3), i * dx, height - h);
   }
-  }
+  stroke(0,255,0);
+  line(0,height - average * height / 100 ,width , height - average * height /100);
+}
 
   // BLANK[5] 平均点の線を引きます
-}
