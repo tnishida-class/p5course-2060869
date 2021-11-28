@@ -18,8 +18,6 @@ function calendar(y, m){
   let dow = dayOfWeek(y, m, 1);
   for(let d = 1; d <= daysInMonth(y, m); d++){
     // BLANK[3] (hint: まずは daysInYear, dayOfWeek を作ろう)
-    let diy = daysInYear(y);
-    console.log(daysInYear);
   }
 }
 
@@ -29,6 +27,7 @@ function isLeapYear(y){
 
 function daysInYear(y){
   // BLANK[1]
+  return isLeapYear(y)? 366: 365;
 }
 
 function daysInMonth(y, m){
@@ -53,6 +52,7 @@ function dayOfYear(y, m, d){
 
 function dayOfWeek(y, m, d){
   // BLANK[2]
+  
 }
 
 function dayOfWeekAsString(dow){

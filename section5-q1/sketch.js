@@ -21,4 +21,5 @@ function balloon(t, x, y){
   triangle(x, y + h, x + 10, y + h + 20, x + 20, y+h);
   fill(255);
   text(t, x + p, y + h + p);
+  pop();
 }
